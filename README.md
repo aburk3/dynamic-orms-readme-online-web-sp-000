@@ -38,7 +38,7 @@ end
 
 Here, we create our `songs` table, so-named because we are mapping this table to an existing class, `Song`. The column names for the table are taken from the known `attr_accessor`s of the `Song` class.
 
-This is one way to map our program to our database, but it has some limitations. For one thing, our `#create_table` method is dependent on our knowing exactly what to name our table and columns. So, every class in our program would require us to re-write this `#create_table` method, swapping out different table and column names each time. This is repetitive. As you know, we programmers are lazy and we hate to repeat ourselves. Any smelly, repetitious code, begs the question: can we abstract this into a re-usable method? In this case––can we extract our class-specific `#create_table` method into one that is flexible and abstract and be used across any class?
+This is one way to map our program to our database, but it has some limitations. For one thing, our `#create_table` method is dependent on our knowing exactly what to name our table and columns. So, every class in our program would require us to re-write this `#create_table` method, swapping out different table and column names each time. This is repetitive. As you know, we programmers are lazy and we hate to repeat ourselves. Any smelly, repetitious code, begs the question: can we abstract this into a re-usable method? In this case––can we extract our class-specific `#create_table` method into one that is flexible and abstract and can be used across any class?
 
 Well, with a dynamic ORM, we can abstract all of our conventional ORM methods into just such flexible, abstract, and shareable methods.
 
